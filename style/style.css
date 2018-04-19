@@ -2,20 +2,23 @@ body{
   background-image: url(../img/fon.jpg);
   font-family: Tahoma;
   font-size: 14px;
-  margin: 0;
+  margin: 10px auto;
   padding: 0;
-  color: #FFFFFF;
+  color: #484848;
 }
 a{
   text-decoration: none;
   color: #FFFFFF
 }
 header{
-	background: linear-gradient(to top, #292929, #4b4b4b);
-  width: 1200px;
-  height: 150px;
-  border: 1px solid yellow;
-  margin: 0 auto;
+
+	background: #f7f7f7;
+	width: 1200px;
+	height: 170px;
+	border: 5px solid #fff;
+	margin: 0 auto;
+	box-sizing: border-box;
+	box-shadow: 0 10px 10px gray;
 }
 #header_top{
   height: 90px;
@@ -23,8 +26,12 @@ header{
   display: flex;
 }
 #block_logo{
-  background: url(../img/logo.jpg) center left no-repeat;
-  width: 180px;
+  background: url(../img/logo_new.png) center left no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 300px;
+  height: 90px;
   box-sizing: border-box;
 }
 #lozung{
@@ -47,9 +54,10 @@ header{
 #header_bottom{
   height: 60px;
   box-sizing: border-box;
-  background-color: #333333;
+  background-color: #898989;
   border-radius: 10px;
   text-align: center;
+  margin: 5px 5px 0 5px;
 }
 #header_bottom a{
 	display: inline-block;
@@ -59,14 +67,14 @@ header{
   transition: 0.2s linear;
 }
 #header_bottom a:hover{
-	color: #a0a0a0;
+	color: #ffffff;
 	transform: scale(1.1);
 }
 #header_bottom .verticalLine{
   display: inline-block;
   width: 1px;
   height: 30px;
-  background-color: gray;
+  background-color: #fff;
   margin-bottom: -10px;
 
 }
