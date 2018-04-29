@@ -8,31 +8,33 @@ body{
 }
 a{
   text-decoration: none;
-  color: #FFFFFF
+/*  color: #FFFFFF*/
 }
 header{
-
 	background: #f7f7f7;
 	width: 1200px;
-	height: 170px;
+	height: 150px;
 	border: 5px solid #fff;
 	margin: 0 auto;
 	box-sizing: border-box;
 	box-shadow: 0 10px 10px gray;
+
 }
 #header_top{
   height: 90px;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
 }
 #block_logo{
   background: url(../img/logo_new.png) center left no-repeat;
   background-size: contain;
   overflow: hidden;
-  border-radius: 15px;
   width: 300px;
   height: 90px;
   box-sizing: border-box;
+  border-top: 1px solid #898989;
+  border-left: 1px solid #898989;
 }
 #lozung{
 	width: 300px;
@@ -40,9 +42,52 @@ header{
 	margin: auto 10px;
 }
 #block_information{
-  width: 300px;
-  margin: auto 0;
+  width: 700px;
   box-sizing: border-box;
+  border: 1px solid yellow;
+  text-align: center;
+  height: 30px;
+  border: 1px solid #898989;
+  border-top-width: 0px;
+  background-color: #fff;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px; 
+}
+#block_information .information{
+	margin: 0 20px;
+	display: inline-block;
+}
+#search{
+	background-color: #fff;
+	width: 500px;
+	height: 30px;
+	margin: 0 auto;
+	border: 1px solid gray;
+	border-radius: 5px;
+	line-height: 30px;
+	margin-top: 20px;
+}
+#search-text{
+	width: 410px;
+	float: left;
+	border: none;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 5px;
+	box-sizing: border-box;
+}
+#search-submit{
+	/*background: #df3b32;*/
+	background: url(../img/search.jpg) center left no-repeat;
+	background-size: cover;
+	width: 85px;
+	height: 30px;
+	float: left;
+	border: none;
+	box-sizing: border-box;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+
 }
 .icons{
   width: 30px;
@@ -51,32 +96,65 @@ header{
   display: block;
   float: left;
 }
+#price{
+	/*box-shadow: 0px 1px 3px gray;*/
+	width: 300px;
+	height: 90px;
+	border-right: 1px solid #898989;
+	border-top: 1px solid #898989;
+}
+#cart{
+	border: 1px solid;
+	display: block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	margin: 30px auto;
+	background: url(../img/cart2.jpg) right center no-repeat;
+	background-size: contain;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	box-shadow: 0 1px 3px gray;
+}
 #header_bottom{
-  height: 60px;
-  box-sizing: border-box;
-  background-color: #898989;
-  border-radius: 10px;
-  text-align: center;
-  margin: 5px 5px 0 5px;
+	height: 50px;
+	box-sizing: border-box;
+	/*background: #898989;*/
+	text-align: center;
+	border-bottom: 1px solid #898989;
+	border-left: 1px solid #898989;
+	border-right: 1px solid #898989;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
 }
 #header_bottom a{
+	height: 40px;
 	display: inline-block;
-  line-height: 60px;
-  padding: 0 15px;
-  margin: 0 10px;
-  transition: 0.2s linear;
+	line-height: 40px;
+	padding: 0 25px;
+	margin: 0 5px;
+	transition: 0.2s linear;
+	color: #211e1a;
+	background-color: #fff;
+	transition: 0.2s linear;
+	box-shadow: 0 1px 3px gray;
+	box-sizing: border-box;
+	border: 1px solid #df3b32;
+	position: relative;
 }
 #header_bottom a:hover{
-	color: #ffffff;
-	transform: scale(1.1);
+	background-color: #eeeeee;
+	top: -2px;
 }
 #header_bottom .verticalLine{
   display: inline-block;
   width: 1px;
   height: 30px;
-  background-color: #fff;
-  margin-bottom: -10px;
-
+  background-color: #898989;
+  /*margin-bottom: -10px;*/
 }
 article{
   display: flex;
@@ -92,34 +170,38 @@ article{
 }
 #left-block{
   width: 220px;
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
   box-sizing: border-box;
 }
 #right-block{
   width: 1000px;
-  border: 1px solid yellow;
+ /* border: 1px solid yellow;*/
   box-sizing: border-box;
 }
 #left-block span{
-  display: block;
-  width: 200px;
-  height: 45px;
-  line-height: 45px;
-  padding-left: 10px;
+	display: block;
+	width: 210px;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	background: #898989;
+	color: #fff;
+	box-sizing: border-box;
+	margin: 2px 5px;
 }
 #left-block a{
 	color: #211e1a;
-  text-decoration: none;
-  display: block;
-  box-sizing: border-box;
-  margin: 2px 5px;
-  background-color: #ffffff;
-  width: 210px;
-  height: 35px;
-  line-height: 35px;
-  padding-left: 10px;
-  transition: 0.2s linear;
-  box-shadow: 1px 0 1px gray;
+	text-decoration: none;
+	display: block;
+	box-sizing: border-box;
+	margin: 2px 5px;
+	background-color: #ffffff;
+	width: 210px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 10px;
+	transition: 0.2s linear;
+	box-shadow: 0 1px 3px gray;
 }
 #left-block a:hover{
 	background-color: #eeeeee;
