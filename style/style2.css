@@ -1,13 +1,159 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
-.navbar{
-	opacity: 0.1;
+#greeting{
+	position: absolute;
+	height: 30%;
+	color: #fff;
+	text-align: center;
+}
+#carouselExampleIndicators{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+#greeting :first-child{
+		font-style: italic;
+		font-weight: bold;
+		font-family: 'Cormorant Infant', serif;
+	}
+#greeting :last-child{
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 576px){
+	#greeting :first-child{
+		font-size: 12pt;
+	}
+	#greeting :last-child{
+		font-size: 15pt;
+	}
+}
+@media screen and (min-width: 577px) and (max-width: 768px){
+	#greeting :first-child{
+		font-size: 20pt;
+	}
+	#greeting :last-child{
+		font-size: 25pt;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+	#greeting :first-child{
+		font-size: 25pt;
+	}
+	#greeting :last-child{
+		font-size: 30pt;
+	}
+}
+@media screen and (min-width: 993px) and (max-width: 1200px){
+	#greeting :first-child{
+		font-size: 30pt;
+	}
+	#greeting :last-child{
+		font-size: 35pt;
+	}
+}
+@media screen and (min-width: 1201px){
+	#greeting :first-child{
+		font-size: 35pt;
+	}
+	#greeting :last-child{
+		font-size: 40pt;
+	}
+}
+
+.navbar a{
+	color: #fff !important;
+	transition: 0.4s;
+}
+.navbar a:hover{
+	color: darkred !important;
 }
 
 header{
-	height: 600px;
+	/*position: relative;*/
+	/*height: auto;*/
 	background: url(../img/fon-header.jpg) center center no-repeat;
 	background-size: cover;
 }
+
+article{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	justify-content: space-between;
+}
+
+.myCard{
+	margin-top: 10px;
+	box-shadow: 0px 0px 5px gray;
+}
+#menu{
+	background-color: rgb(0,0,0,0.8);
+}
+#content{
+	background-color: #fff;
+}
+/*Боковое меню старт*/
+.sidebar ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu a{
+	background:#3d3d3d;
+	color: #fff;
+	padding: 10px;
+	display: block;
+	border-bottom: 1px solid #666;
+	transition: 0.5s all;
+}
+.sidebar{
+	width: 90%;
+	margin: 20px;
+}
+.menu a:hover{
+	background: #666;
+	padding: 10px 0 10px 20px;
+}
+.menu li:first-child a, .menu li .v_menu li:first-child a{
+	border-radius: 3px 3px 0 0;
+}
+.menu li:last-child a, .menu li .v_menu li:last-child a{
+	border-radius: 0 0 3px 3px;
+	border-bottom: 0;
+}
+.menu li .v_menu li a{
+	border-radius: 0;
+}
+.p_menu{position: relative;}
+.v_menu{
+	position: absolute;
+	width: 100%;
+	left: 100%;
+	top: -9999px;
+	opacity: 0;
+	border-left: 10px solid transparent;
+	transition: 0.5s opacity;
+	z-index: 999;
+}
+.p_menu:hover .v_menu{
+	opacity: 1;
+	top: 0;
+}
+.p_menu::after{
+	content: "";
+	position: absolute;
+	border:5px solid;
+	border-color: transparent transparent transparent #eee;
+	top:1em;
+	right: 0.7em;
+	transition: 0.5s;
+}
+.p_menu:hover::after{
+	transform: scaleX(-1);
+}
+/*Боковое меню конец*/
