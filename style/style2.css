@@ -31,6 +31,9 @@ body{
 	#greeting :last-child{
 		font-size: 15pt;
 	}
+	#left-menu{
+		display: none;
+	}
 }
 @media screen and (min-width: 577px) and (max-width: 768px){
 	#greeting :first-child{
@@ -38,6 +41,9 @@ body{
 	}
 	#greeting :last-child{
 		font-size: 25pt;
+	}
+	#left-menu{
+		display: none;
 	}
 }
 @media screen and (min-width: 769px) and (max-width: 992px){
@@ -84,7 +90,6 @@ article{
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
-	justify-content: space-between;
 }
 
 .myCard{
@@ -112,8 +117,8 @@ article{
 	transition: 0.5s all;
 }
 .sidebar{
-	width: 90%;
-	margin: 20px;
+	/*width: 100%;*/
+	margin-top: 10px;
 }
 .menu a:hover{
 	background: #666;
